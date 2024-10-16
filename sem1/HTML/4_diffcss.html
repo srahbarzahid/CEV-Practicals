@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   	<link rel="stylesheet" href="style.css">
+   	
+   	<style>
+   	body{
+   	width:100%;
+   	height:100%;
+   	 }
+   	.box
+   	 {
+	   width:500px;
+	   height:150px;
+	   background-color:cyan;
+	   border-radius:15px;
+	   overflow:hidden;
+	   		   	
+   	 }
+   	 .boxalign{
+   	     display:flex;
+   	     flex-direction:column;
+   	     justify-content: center;
+   	     align-items:center;
+   	   }
+   	 .para{
+   	   font-size:18px;
+   	   color:black;
+   	   font-weight:500;
+   	   font-style:italic;
+   	 }
+   	 .boxalign h3 
+   	 {
+   	 margin-bottom:4px;
+   	 }
+   	</style>
+  </head>
+  
+  <body>
+  	<h2>CSS Styling Using Various method</h2>
+  	<p style="color:red;font-size:20px;font-family:arial;">this paragraph style usin inline css</p>
+  	<h2>using internal css</h2>
+  	<div class="box">
+  	   <div class="boxalign">
+  	  	<h3>Internal CSS</h3>
+  		<p class="para">this paragraph style using internal css css</p>
+  	   </div>
+  	</div>	
+  	
+  	<div class="box-1">
+  		<h2 class="head-1">External CSS</h2>
+  		<p class= "para-1">this paragraph style usin external css</p>
+  	</div>
+  </body>
+  
+</html>

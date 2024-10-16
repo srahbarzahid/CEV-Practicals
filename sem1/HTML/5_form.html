@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>registration form</title>
+  	<style>
+  		table
+  		 {
+  		 width:60%;
+  		 font-size: 18px;
+  		 margin-left:50px;
+  		  }
+  		tr,th,td
+  		 {
+  		  padding:15px;
+  		  }
+  		#btn
+  		 {
+  		  border:none;
+  		  padding:10px 20px;
+  		  background-color: #D91656;
+  		  border-radius:8px;
+  		  color:white;	
+  		  font-size:15px;
+  		  cursor:pointer;
+  		  font-weight:500;
+  		  transition:0.5s;
+  		 }
+  		#btn:hover
+  		{
+  		  background-color:red;	
+  		} 
+  	</style>
+  </head>
+
+   <body>
+   
+   	<form>
+   		<table>
+   			<tr>
+   				<th colspan="1">Registration form</th>
+   			</tr>
+   			<tr>
+   				<td>Full Name</td>
+   				<td colspan="2"><input type="text" name="full-name"></td>
+   			</tr>
+   			<tr>
+   				<td>Mobile Number</td>
+   				<td colspan="2"><input type="text" name="mobile-number"></td>
+   			</tr>
+   			<tr>
+   				<td>Email id</td>
+   				<td colspan="2"><input type="email" name="email-id"></td>
+   			</tr>
+   			<tr>
+   				<td>Age</td>
+   				<td colspan="2"><input type="text" name="age"></td>
+   			</tr>
+   			<tr>
+   				<td>Gender</td>
+   				<td colspan="2"><input type="radio" name="gender">Male
+   				<input type="radio" name="gender">Femail
+   				<input type="radio" name="gender">Others
+   				</td>
+   			</tr>
+   			<tr>
+   				<td>Date Of Birth</td>
+   				<td colspan="2"><input type="date" name="dob"></td>
+   			</tr>
+   			<tr>
+   				<td>Address</td>
+   				<td colspan="2"><textarea cols="30" rows="10"></textarea></td>
+   			</tr>
+   			<tr>
+   				<td>current Study</td>
+   				<td>
+   					<select name="course">
+   						<option value="btech">B.Tech</option>
+   						<option value="bsc">BSc</option>
+   						<option value="msc">MSc</option>
+   						<option value="mca">MCA</option>
+   					</select>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td>Department</td>
+   				<td colspan="2">
+   					<select name="department">
+   						<option value="cs">CSE</option>
+   						<option value="ECE">ECE</option>
+   						<option value="cs">cs</option>
+   						<option value="mca">MCA</option>
+   						<option value="EEE">EEE</option>
+   						<option value="maths">Maths</option>
+   						<option value="physics">physics</option>
+   					</select>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td>Uplod CV</td>
+   				<td colspan="2"><input type="file" name="cv-file"></td>
+   			</tr>
+   			<tr>
+   				<td>Programming Languages</td>
+   				<td colspan="2"><input type="checkbox" name="code">HTML
+   					<input type="checkbox" name="code">Reactjs
+   					<input type="checkbox" name="code">CSS
+   					<input type="checkbox" name="code">Flutter
+   				</td>
+   			</tr>
+   			<tr>
+   				<td>Language</td>
+   				<td colspan="2">
+   					<input type="checkbox" name="lang">English
+   					<input type="checkbox" name="lang">Malayalam
+   					<input type="checkbox" name="lang">Arabic
+   					<input type="checkbox" name="lang">Hindi
+   				</td>
+   			</tr>
+   			<tr>
+   				<td colspan="1"><input id="btn" type="submit" value="submit"></td>
+   				<td colspan="2"><input id="btn" type="reset" value="reset"></td>
+   			</tr>
+   		</table>
+   	</form>
+   </body>	
+</html>
