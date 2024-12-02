@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>mouse Event</title>
+</head>
+
+  <body style="text-align:center">
+  	<h2>Mouse Handling</h2>
+  	<img id="img-tag" src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg" onmouseover="changeImg()" onmouseout="setOld()" width="220px" height="230px" alt="image"/>
+  
+  
+  <script>
+  	function changeImg(){
+  	 document.getElementById("img-tag").src="https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz"; 
+  	}
+  	function setOld()
+  	{
+  	  document.getElementById("img-tag").src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg";
+  	}
+  	
+  </script>
+  </body>
+</html>
