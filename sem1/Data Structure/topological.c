@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_VERTICES 100
-struct Graph { int V;
-  int adj[MAX_VERTICES][MAX_VERTICES];
-  int in_degree[MAX_VERTICES]; 
-  };
+struct Graph {
+    int V;  // Number of vertices
+    int adj[MAX_VERTICES][MAX_VERTICES];  // Adjacency matrix
+    int in_degree[MAX_VERTICES];  // In-degree array
+};
 
 void createGraph(struct Graph* graph, int V) {
     graph->V = V;
@@ -18,7 +19,7 @@ void createGraph(struct Graph* graph, int V) {
 }
 
 void addEdge(struct Graph* graph, int u, int v) {
-    graph->adj[u][v] = 1;  // Edge from u to v
+    graph->adj[u][v] = 1;  // Add edge from u to v
     graph->in_degree[v]++;  // Increment in-degree of vertex v
 }
 
@@ -27,20 +28,21 @@ void topologicalSort(struct Graph* graph) {
     int queue[MAX_VERTICES], front = 0, rear = 0;
     int top_order[MAX_VERTICES];
     int count = 0;
+
     for (int i = 0; i < V; i++) {
         if (graph->in_degree[i] == 0) {
             queue[rear++] = i;
         }
     }
     while (front < rear) {
-        int u = queue[front++];  // Dequeue a vertex with in-degree 0
+        int u = queue[front++];  
         top_order[count++] = u;
 
         for (int v = 0; v < V; v++) {
             if (graph->adj[u][v] == 1) {
                 graph->in_degree[v]--;
                 if (graph->in_degree[v] == 0) {
-                    queue[rear++] = v;
+                    queue[rear++] = v;  
                 }
             }
         }
@@ -50,20 +52,18 @@ void topologicalSort(struct Graph* graph) {
         printf("There exists a cycle in the graph\n");
     } else {
         printf("Topological Sort: ");
-        for (int i = 0; i < V; i++) {
+        for (int i = 0; i < count; i++) {  
             printf("%d ", top_order[i]);
         }
         printf("\n");
     }
 }
-
 int main() {
     int V, E;
     printf("Enter the number of vertices: ");
     scanf("%d", &V);
     printf("Enter the number of edges: ");
     scanf("%d", &E);
-
     struct Graph graph;
     createGraph(&graph, V);
 
@@ -73,9 +73,6 @@ int main() {
         scanf("%d %d", &u, &v);
         addEdge(&graph, u, v);
     }
-
     topologicalSort(&graph);
-
     return 0;
 }
-
