@@ -17,7 +17,7 @@ class AddMatrix{
     }
     public static AddMatrix sum(AddMatrix c1, AddMatrix c2) {
         AddMatrix temp = new AddMatrix();
-        if (c1.r == c2.c && c1.r == c2.c) {
+        if (c1.r == c2.r && c1.c == c2.c) {
             temp.r =c1.r;
             temp.c= c1.c;
             for (int i = 0; i < c1.r; i++) {
@@ -51,3 +51,4 @@ class AddMatrix{
         
     }
   }
+  
