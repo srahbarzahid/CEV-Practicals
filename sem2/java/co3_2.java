@@ -37,7 +37,7 @@ class Employee{
      
    }
    
-   class Teacher{
+   class co3_2{
      public static void main(String[] args){
        teacher[] t = new teacher[2];
        t[0]=new teacher(101,"deepa",30000,"vatakara","mca","networking");

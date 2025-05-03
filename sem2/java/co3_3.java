@@ -59,7 +59,7 @@ class Teacher extends Employee {
     }
 }
 
-public class Teacher3{
+public class co3_3{
     public static void main(String[] args) {
 
 
