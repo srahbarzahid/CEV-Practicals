@@ -30,7 +30,7 @@ class Employee{
         while(true){
             Scanner sc= new Scanner(System.in);
             System.out.print("Enter ID : "); 
-            int no = sc.nextLine();
+            int no = sc.nextInt();
             for(i=0;i<n;i++){
                 if(emp[i].eno == no){
                     emp[i].display();
