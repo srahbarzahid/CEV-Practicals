@@ -6,6 +6,6 @@ public class TestArit{
  System.out.println("substraction:"+obj.sub(34,18));
  System.out.println("multipication:"+obj.mult(9,4));
  System.out.println("division:"+obj.div(45,4));
- System.out.println("reminder:"+obj.add(45,10));
+ System.out.println("reminder:"+obj.rem(45,10));
  }
 }
