@@ -1,0 +1,40 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load dataset from CSV
+df = pd.read_csv("iris.csv")
+
+# Inspect data
+print("First 5 rows of dataset:")
+print(df.head())
+
+# Features and target
+# (update these column names to match your CSV headers if needed)
+X = df.iloc[:, :-1]  # All columns except the last one
+y = df.iloc[:, -1]   # Last column (species)
+
+# Encode the target labels if they are categorical (e.g., 'setosa', etc.)
+le = LabelEncoder()
+y_encoded = le.fit_transform(y)
+
+# Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42)
+
+# Train Naive Bayes model
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f"\nAccuracy of Naive Bayes on your iris.csv: {accuracy:.2f}")
+
+# Print detailed report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred, target_names=le.classes_))
+
