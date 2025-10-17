@@ -7,4 +7,4 @@ df=pd.DataFrame(data)
 print(df)
 df.loc[df.profit>0,'profit']=True
 df.loc[df.profit<=0,'profit']=False
-print(df)
+print(df.to_string(index=False))
