@@ -15,3 +15,4 @@ sample = [[2,2,2,2]]
 pred = c_knn.predict(sample)
 pred_v = [iris.target_names[p] for p in pred]
 print(pred_v)
+print(f"confusion metrics:\n {metrics.confusion_matrix(y_test,y_pred)}")
