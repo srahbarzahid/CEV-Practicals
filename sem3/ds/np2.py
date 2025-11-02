@@ -1,0 +1,11 @@
+import numpy as np
+a1=np.array([6,2,3,4])
+a2=np.array([2,2,5,3])
+print("a>b")
+print(np.greater(a1,a2))
+print("a>=b")
+print(np.greater_equal(a1,a2))
+print("a<b")
+print(np.less(a1,a2))
+print("a<=b")
+print(np.less_equal(a1,a2))

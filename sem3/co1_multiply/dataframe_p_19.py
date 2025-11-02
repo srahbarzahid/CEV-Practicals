@@ -1,8 +1,8 @@
 import pandas as pd
 
 details = {
-    'name':['amal','rabee','sinu'],
-    'age':[21,22,23]
+    'name':['a','b','c','d'],
+    'age':[24,25,26,27]
 }
 df=pd.DataFrame(details)
 print(df)

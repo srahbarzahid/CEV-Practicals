@@ -7,5 +7,5 @@ data={
 index = ['a1','b1','c1','d1','e1','f1']
 df=pd.DataFrame(data,index)
 print(df.to_string())
-df.reset_index(inplace=True)
+df.reset_index(inplace=True,drop=True)
 print(df.to_string())
